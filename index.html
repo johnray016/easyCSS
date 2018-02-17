@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>easyCSS - Responsive CSS Framework</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="easyCSS is minimal, user-friendly and purely responsive CSS framework that is built for small projects">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono|Open+Sans|Roboto:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<!--NAVIGATION-->
+	<div class="navigation">
+		<div class="container">
+				<div class="col-30">
+					<img src="img/logo_3.png" alt="LOGO">					
+				</div>
+				<div class="col-70">
+					<ul id="menu">
+						<li><a href="#start">ABOUT</a></li>
+						<li><a href="#">DOWNLOAD</a></li>
+						<li><a href="#" id="codes">CODES</a></li>					
+						<ul id="sub-menu">
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#grid">Grid System</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#alerts">Alerts</a></li>
+							<li><a href="#buttons">Buttons</a></li>
+							<li><a href="#forms">Forms</a></li>
+							<li><a href="#blockquote">Blockquote</a></li>
+						</ul>
+					</ul>	
+				</div>
+				<div class="clearfix"></div>				
+		</div>
+		<hr>
+	</div>
+	<div class="absolute">
+		<div class="jumbotron">
+			<div class="container">	
+				<img src="img/logo.png" alt="LOGO"><br>
+				A simple and responsive CSS Framework.<br>
+				<span id="version">Version 1.0.0</span><br><br><br>
+				<a href="#start" class="getStarted">GET STARTED</a>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="container">
+			<div class="introduction">
+				<div class="row">
+					<h2 id="start">Get Started</h2><br><br>
+					<p><strong>easyCSS</strong> is minimal, user-friendly and purely responsive CSS framework that is built for small projects. Specially designed for users that don't have advance knowledge with HTML and CSS.</p><br><br>
+					<h4>Instructions</h4><br><br>
+					<p>Just <strong><a href="">DOWNLOAD</a></strong>  the compressed or uncompressed version of the CSS file and paste it to your CSS folder. (Make sure that you have a separate folder for <strong>CSS</strong>). </p><br><br>
+					<h6>Uncompressed Version</h6>
+					<p>Paste this code to the <code>&lt;head&gt;</code> section of your HTML file to link the Uncompressed CSS file into your HTML.</p><br>
+					<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- For Uncompressed Version --&gt;</span><br>
+							<span class="tag">&lt;link <span class="class">rel</span>=<span class="value">"stylesheet"</span> <span class="class">type</span>=<span class="value">"text/css"</span> <span class="class">href</span>=<span class="value">"css/easyCSS.css"</span>&gt;</span>
+						</code></pre>						
+					</div>
+					<br><br><br>
+					<h6>Compressed Version</h6>
+					<p>Paste this code to the <code>&lt;head&gt;</code> section of your HTML file to link the Compressed CSS file into your HTML.</p><br>
+					<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- For Compressed Version --&gt;</span><br>
+							<span class="tag">&lt;link <span class="class">rel</span>=<span class="value">"stylesheet"</span> <span class="class">type</span>=<span class="value">"text/css"</span> <span class="class">href</span>=<span class="value">"css/easyCSS.min.css"</span>&gt;</span>
+						</code></pre>						
+					</div>
+				</div>
+			</div>
+		</div>	
+		<br><br><br><br><br><br>	
+		<div class="container">
+			<div class="typography">
+				<div class="row">				
+					<h1 class="heading" id="typography">Typography</h1><br>
+					<h3>Headings</h3>
+					<p>To allow users to resize the text (in the browser menu), many developers use em instead of pixels. The em size unit is recommended by the W3C. 1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px. The size can be calculated from pixels to em using this formula: pixels/16=em. The typography in <strong>easyCSS</strong> has <code>font-size</code> defined in 1em (16px).</p>
+					<div class="example">
+					<h1>Heading</h1>&nbsp;<code>&lt;h1&gt;</code><span class="heading-text">3em (48px)</span><br><br>
+					<h2>Heading</h2>&nbsp;<code>&lt;h2&gt;</code><span class="heading-text">2.25em (36px)</span><br><br>
+					<h3>Heading</h3>&nbsp;<code>&lt;h3&gt;</code><span class="heading-text">1.75em (28px)</span><br><br>
+					<h4>Heading</h4>&nbsp;<code>&lt;h4&gt;</code><span class="heading-text">1.375em (22px)</span><br><br>
+					<h5>Heading</h5>&nbsp;<code>&lt;h5&gt;</code><span class="heading-text">1.125em (18px)</span><br><br>
+					<h6>Heading</h6>&nbsp;<code>&lt;h6&gt;</code><span class="heading-text">1em (16px)</span><br>
+					<br>
+						<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- Default Headings --&gt;</span><br>
+							<span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span><br>
+							<span class="tag">&lt;h2&gt;</span>Heading<span class="tag">&lt;/h2&gt;</span><br>
+							<span class="tag">&lt;h3&gt;</span>Heading<span class="tag">&lt;/h3&gt;</span><br>
+							<span class="tag">&lt;h4&gt;</span>Heading<span class="tag">&lt;/h4&gt;</span><br>
+							<span class="tag">&lt;h5&gt;</span>Heading<span class="tag">&lt;/h5&gt;</span><br>
+							<span class="tag">&lt;h6&gt;</span>Heading<span class="tag">&lt;/h6&gt;</span><br>
+							<br><span class="comment">&lt;!-- Other Tags to Style your Heading --&gt;</span><br>
+							<span class="tag">&lt;a&gt;</span>Anchor<span class="tag">&lt;/a&gt;</span><br>
+							<span class="tag">&lt;em&gt;</span>Emphasis<span class="tag">&lt;/em&gt;</span><br>
+							<span class="tag">&lt;small&gt;</span>Small<span class="tag">&lt;/small&gt;</span><br>
+							<span class="tag">&lt;span&gt;</span>span<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&lt;u&gt;</span>Underline<span class="tag">&lt;/u&gt;</span><br>
+						</code></pre>
+						</div>
+					</div>
+					<br><br>
+					<h3>List</h3>
+					<p>List is the common tag used to display items. <strong>easyCSS</strong> has three different type of list.
+					The unordered List <code>&lt;ul&gt;</code> will display your items with bullets, ordered list <code>&lt;ol&gt;</code> will display your items with numbers and description list <code>&lt;dl&gt;</code> with terms and description. </p>					
+					<div class="example">
+						<div class="col-list">
+							<ul>
+								<li>Unordered list item 1</li>
+								<li>Unordered list item 2</li>
+								<li>Unordered list item 3</li>
+							</ul>
+						</div>
+						<div class="col-list">
+							<ol>
+								<li>Ordered list item 1</li>
+								<li>Ordered list item 2</li>
+								<li>Ordered list item 3</li>
+							</ol>
+						</div>
+						<div class="col-list">
+							<dl>
+						  		<dt>Description list item 1</dt>
+								<dd>Description list item 1.1</dd>
+								<dt>Description list item 2</dt>
+							</dl>
+						</div>
+						<div class="clearfix"></div>
+						<div class="code-example">
+							<pre><code>
+								<span class="comment">&lt;!-- Unordered List --&gt;</span><br>
+								<span class="tag">&lt;ul&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Unordered list item 1<span class="tag">&lt;/li&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Unordered list item 2<span class="tag">&lt;/li&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Unordered list item 3<span class="tag">&lt;/li&gt;</span><br>
+								<span class="tag">&lt;/ul&gt;</span><br>
+								<br>
+								<span class="comment">&lt;!-- Ordered List --&gt;</span><br>
+								<span class="tag">&lt;ol&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Ordered list item 1<span class="tag">&lt;/li&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Ordered list item 2<span class="tag">&lt;/li&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Ordered list item 3<span class="tag">&lt;/li&gt;</span><br>
+								<span class="tag">&lt;/ol&gt;</span><br>
+								<br>
+								<span class="comment">&lt;!-- Description List --&gt;</span><br>
+								<span class="tag">&lt;dl&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;dt&gt;</span>Description list item 1<span class="tag">&lt;/dt&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;dd&gt;</span>Description list item 1.1<span class="tag">&lt;/dd&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;<span class="tag">&lt;dt&gt;</span>Description list item 2<span class="tag">&lt;/dt&gt;</span><br>
+								<span class="tag">&lt;/dl&gt;</span><br>
+							</code></pre>
+						</div>
+					</div>
+					<br><br>
+					<h3>Paragraph</h3>
+					<p>The <code>&lt;p&gt;</code> tag defines a paragraph. Browsers automatically add some space (margin) before and after each <code>&lt;p&gt;</code> element. <strong>EasyCSS</strong> use the default <code>font-size</code> 1em (16px) and use the <code>font-family</code><a href="https://fonts.google.com/specimen/Roboto">Roboto</a>, created by Christian Robertson, and provided by Google Fonts.</p>
+					<div class="example">
+						<p>This is an example of a paragraph with 1em(px) font-size using Roboto font from Google Fonts.</p><br>
+						<div class="code-example">
+						<pre><code>
+								<span class="comment">&lt;!-- Paragraph --&gt;</span><br>
+								<span class="tag">&lt;p&gt;</span>This is an example of a paragraph with 1em(px) font-size using Roboto font from Google Fonts.<span class="tag">&lt;/p&gt;</span><br>			
+						</code></pre>	
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<br><br><br><br><br>
+		<div class="container">
+			<div class="grid">
+				<h1 class="heading" id="grid">Grid System</h1>
+				<br>
+				<p>Responsive columns that is mobile-friendly. <strong>EasyCSS</strong> has 5 different column layout that will help you design your simple website. Just replace the <code>&lt;span&gt;</code> with your content in each column.</p>	
+				<div class="example">
+					<div class="row">				
+						<div class="col-50">
+							<span class="column">col-50</span>
+						</div>
+						<div class="col-50">
+							<span class="column">col-50</span>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="row">				
+						<div class="col-33">
+							<span class="column">col-33</span>
+						</div>
+						<div class="col-33">
+							<span class="column">col-33</span>
+						</div>
+						<div class="col-33">
+							<span class="column">col-33</span>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="row">				
+						<div class="col-60">
+							<span class="column">col-60</span>
+						</div>
+						<div class="col-40">
+							<span class="column">col-40</span>
+						</div>				
+						<div class="clearfix"></div>
+					</div>
+					<div class="row">				
+						<div class="col-40">
+							<span class="column">col-40</span>
+						</div>
+						<div class="col-60">
+							<span class="column">col-60</span>
+						</div>				
+						<div class="clearfix"></div>
+					</div>
+					<div class="row">				
+						<div class="col-25">
+							<span class="column">col-25</span>
+						</div>
+						<div class="col-25">
+							<span class="column">col-25</span>
+						</div>	
+						<div class="col-25">
+							<span class="column">col-25</span>
+						</div>	
+						<div class="col-25">
+							<span class="column">col-25</span>
+						</div>				
+						<div class="clearfix"></div>
+					</div>
+					<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- Two Columns with both 50% width --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"row"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-50"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-50<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-50"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-50<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"clearfix"</span>&gt;&lt;/div&gt;</span><br>
+							<span class="tag">&lt;/div&gt;</span><br>
+							<br>
+							<span class="comment">&lt;!-- Three Columns with 33.33333% width each --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"row"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-33"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-33<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-33"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-33<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-33"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-33<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"clearfix"</span>&gt;&lt;/div&gt;</span><br>
+							<span class="tag">&lt;/div&gt;</span><br>
+							<br>
+							<span class="comment">&lt;!-- Two Columns with 60% and 40% width --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"row"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-60"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-60<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-40"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-40<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>					
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"clearfix"</span>&gt;&lt;/div&gt;</span><br>
+							<span class="tag">&lt;/div&gt;</span><br>
+							<br>
+							<span class="comment">&lt;!-- Two Columns with 40% and 60% width --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"row"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-40"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-40<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-60"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-60<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>					
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"clearfix"</span>&gt;&lt;/div&gt;</span><br>
+							<span class="tag">&lt;/div&gt;</span><br>
+							<br>
+							<span class="comment">&lt;!-- Four Columns with 25% width each --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"row"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-25"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-25<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-25"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-25<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>	
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-25"</span>&gt;</span>	<br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-25<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"col-25"</span>&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;</span>col-25<span class="tag">&lt;/span&gt;</span><br>
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br>					
+							<span class="tag">&nbsp;&nbsp;&nbsp;&lt;div <span class="class">class</span>=<span class="value">"clearfix"</span>&gt;&lt;/div&gt;</span><br>
+							<span class="tag">&lt;/div&gt;</span><br>
+						</code></pre>	
+					</div>	
+				</div>
+			</div>
+		</div>	
+		<br><br><br><br><br>
+		<div class="container">
+			<div class="tables">
+				<div class="row">
+					<h1 class="heading" id="tables">Tables</h1>
+					<br>
+					<p>The table in HTML is defined by <code>&lt;table&gt;</code> tag. Table element allows users to display arrange sets of data using rows and columns. This table includes a <code>&lt;caption&gt;</code> tag to describe the title of each table element. <strong>easyCSS</strong> have 2 different table format. The <strong>Three Column Table</strong> and <strong>Four Column Table.</strong> If you want to add more rows in your table, just add another <code>&lt;tr&gt;</code> element before the <code>&lt;/table&gt;</code> tag. Remember <strong>NOT</strong> to use Tables for your website layout.</p>
+					<div class="example">
+							<table>
+							  <caption>Three Column Table with Caption</caption>
+							  <tr>
+							    <th>Member</th>
+							    <th>Age</th>
+							    <th>Location</th>
+							  </tr>
+							  <tr>
+							    <td>Dela Cruz, Juan</td>
+							    <td>21</td>
+							    <td>Rizal</td>
+							  </tr>
+							  <tr>
+							    <td>Penduko, Pedro</td>
+							    <td>27</td>
+							    <td>Laguna</td>
+							  </tr>
+							   <tr>
+							    <td>Doe, John</td>
+							    <td>18</td>
+							    <td>Batangas</td>
+							  </tr>
+							</table>
+						<br>	
+						<div class="code-example">	
+						<pre><code>
+							<br>
+							<span class="comment">&lt;!-- Three Column Table with Caption --&gt;</span><br>
+							<span class="tag">&lt;table&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;caption&gt;</span>Three Column Table with Caption<span class="tag">&lt;/caption&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Member<span class="tag">&lt;/th&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Age<span class="tag">&lt;/th&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Location<span class="tag">&lt;/th&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Dela Cruz, Juan<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>21<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Rizal<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Penduko, Pedro<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>27<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Laguna<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Doe, John<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>18<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Batangas<span class="tag">&lt;/td&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+							<span class="tag">&lt;/table&gt;</span><br>							
+							<br>
+						</code></pre>	
+						</div>
+						<br><br>			
+							<table>
+							  <caption>Four Column Table with Caption</caption>
+							  <tr>
+							    <th>Students</th>
+							    <th>Prelim</th>
+							    <th>Midterm</th>
+							    <th>Finals</th>
+							  </tr>
+							  <tr>
+							    <td>Dela Cruz, Juan</td>
+							    <td>89%</td>
+							    <td>92%</td>
+							    <td>85%</td>
+							  </tr>
+							  <tr>
+							    <td>Penduko, Pedro</td>
+							    <td>93%</td>
+							    <td>87%</td>
+							    <td>86%</td>
+							  </tr>
+							   <tr>
+							    <td>Doe, John</td>
+							    <td>83%</td>
+							    <td>81%</td>
+							    <td>88%</td>
+							  </tr>
+							</table>
+							<br>
+							<div class="code-example">	
+								<pre><code>
+									<span class="comment">&lt;!-- Four Column Table with Caption --&gt;</span><br>
+									<span class="tag">&lt;table&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;caption&gt;</span>Four Column Table with Caption<span class="tag">&lt;/caption&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Students<span class="tag">&lt;/th&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Prelim<span class="tag">&lt;/th&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Midterm<span class="tag">&lt;/th&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Finals<span class="tag">&lt;/th&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Dela Cruz, Juan<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>89%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>92%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>85%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Penduko, Pedro<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>93%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>87%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>86%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Doe, John<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>83%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>91%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>88%<span class="tag">&lt;/td&gt;</span><br>
+									&nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+									<span class="tag">&lt;/table&gt;</span><br>								
+								</code></pre>
+							</div>
+					</div>	
+				</div>				
+			</div>
+		</div>
+		<br><br><br><br><br>
+		<div class="container">
+			<div class="alerts">
+				<div class="row">
+					<h1 class="heading" id="alerts">Alerts</h1>
+					<br>
+					<p><strong>easyCSS</strong> has 4 different varities for alert messages. Alert messages often used to display notification to users.
+					<div class="example">
+						  <div class="alert-success">
+						    <span>SUCCESS!</span> This is an alert success message.
+						  </div>
+						  <br>
+						  <div class="alert-error">
+						    <span>ERROR!</span> This is an alert error message.
+						  </div>
+						  <br>
+						  <div class="alert-warning">
+						    <span>WARNING!</span> This is an alert warning message.
+						  </div>
+						  <br>
+						  <div class="alert-notice">
+						    <span>NOTICE!</span> This is an alert notice message.
+						  </div>
+						  <br>
+						<div class="code-example">
+							<pre><code>
+							<span class="comment">&lt;!-- Success Alert Box --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"alert-success"</span>&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;span&gt;</span>SUCCESS!<span class="tag">&lt;/span&gt;</span> This is an alert success message.<br>
+							<span class="tag">&lt;/div&gt;</span><br><br>
+							<span class="comment">&lt;!-- Error Alert Box --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"alert-error"</span>&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;span&gt;</span>ERROR!<span class="tag">&lt;/span&gt;</span> This is an alert error message.<br>
+							<span class="tag">&lt;/div&gt;</span><br><br>
+							<span class="comment">&lt;!-- Warning Alert Box --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"alert-warning"</span>&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;span&gt;</span>WARNING!<span class="tag">&lt;/span&gt;</span> This is an alert warning message.<br>
+							<span class="tag">&lt;/div&gt;</span><br><br>
+							<span class="comment">&lt;!-- Notice Alert Box --&gt;</span><br>
+							<span class="tag">&lt;div <span class="class">class</span>=<span class="value">"alert-notice"</span>&gt;</span><br>
+							&nbsp;&nbsp;<span class="tag">&lt;span&gt;</span>NOTICE!<span class="tag">&lt;/span&gt;</span> This is an alert notice message.<br>
+							<span class="tag">&lt;/div&gt;</span><br>
+							</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br>
+		<div class="container">
+			<div class="buttons">
+				<div class="row">
+					<h1 class="heading" id="buttons">Buttons</h1>
+						<br>
+						<p><strong>easyCSS</strong> offers two different option for <strong>Buttons</strong>. The <strong>Default Buttons</strong> and the <strong>Outlined Buttons</strong>. <strong>easyCSS</strong> also offers 5 different varieties for buttons depending on user's preferences. You can also resize your buttons with 4 different sizes, just combine the <span class="class">class</span> of your chosen button with the <span class="class">class</span> name of the size you choose. (your code should look like this <code><span class="class">class</span>=<span class="value">"class-1 class-2"</span></code>) </p>
+					<div class="example">
+						<h4>Default Buttons</h4><br>
+						 <button class="primary-button">Primary Button</button>
+						 <button class="secondary-button">Secondary Button</button>
+						 <button class="success-button">Success Button</button>
+						 <button class="warning-button">Warning Button</button>
+						 <button class="error-button">Error Button</button>	
+						 <br><br>
+						<div class="code-example">
+							<pre><code>
+							<span class="comment">&lt;!-- Default Buttons --&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"primary-button"</span>&gt;</span>Primary Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"secondary-button"</span>&gt;</span>Secondary Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"success-button"</span>&gt;</span>Success Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"warning-button"</span>&gt;</span>Warning Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"error-button"</span>&gt;</span>Error Button<span class="tag">&lt;/button&gt;</span>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Outlined Buttons</h4><br>
+						 <button class="outlined-primary-button">Primary Button</button>
+						 <button class="outlined-secondary-button">Secondary Button</button>
+						 <button class="outlined-success-button">Success Button</button>
+						 <button class="outlined-warning-button">Warning Button</button>
+						 <button class="outlined-error-button">Error Button</button>	
+						 <br><br>
+						<div class="code-example">
+							<pre><code>
+							<span class="comment">&lt;!-- Outlined Buttons --&gt;</span><br>	
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"outlined-primary-button"</span>&gt;</span>Primary Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"outlined-secondary-button"</span>&gt;</span>Secondary Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"outlined-success-button"</span>&gt;</span>Success Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"outlined-warning-button"</span>&gt;</span>Warning Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"outlined-error-button"</span>&gt;</span>Error Button<span class="tag">&lt;/button&gt;</span>
+							</code></pre>
+						</div>
+						<br><br>					
+						You can use the button classes on the following: <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.
+						<br><br>
+						<a href="#" class="primary-button" role="button">Anchor Button</a>
+						<button type="button" class="secondary-button">Button Tag</button>
+						<input type="button" class="success-button" value="Input Button">
+						<input type="submit" class="outlined-primary-button" value="Submit Button">
+						<br><br>
+						<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- You can use any of these tags to create a button, just apply the type of button you want to use --&gt;</span><br>
+							<span class="tag">&lt;a <span class="class">href</span>=<span class="value">"#"</span> <span class="class">class</span>=<span class="value">"primary-button"</span> <span class="class">role</span>=<span class="value">"button"</span>&gt;</span>Anchor Button<span class="tag">&lt;/a&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">type</span>=<span class="value">"button"</span> <span class="class">class</span>=<span class="value">"secondary-button"</span>&gt;</span>Button Tag<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"button"</span> <span class="class">class</span>=<span class="value">"success-button"</span> <span class="class">value</span>=<span class="value">"Input Button"</span>&gt;</span><br>
+							<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"submit"</span> <span class="class">class</span>=<span class="value">"outlined-primary-button"</span> <span class="class">value</span>=<span class="value">"Submit Button"</span>&gt;</span>
+						</code></pre>
+						</div>
+						<br><br>
+						<h4>Button Sizes</h4><br>
+						EasyCSS have 4 button sizes that you can combine with <strong>Default Buttons</strong> or <strong>Outlined Buttons</strong>.
+						<br><br>
+						<button class="primary-button xs-button">XSmall Button</button>
+						<button class="primary-button sm-button">Small Button</button>
+						<button class="primary-button md-button">Medium Button</button>
+						<button class="primary-button lg-button">Large Button</button>
+						<br><br>
+						<div class="code-example">
+						<pre><code>
+							<span class="comment">&lt;!-- Different button sizes using .primary-button class --&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"primary-button xs-button"</span>&gt;</span>XSmall Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"primary-button sm-button"</span>&gt;</span>Small Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"primary-button md-button"</span>&gt;</span>Medium Button<span class="tag">&lt;/button&gt;</span><br>
+							<span class="tag">&lt;button <span class="class">class</span>=<span class="value">"primary-button lg-button"</span>&gt;</span>Large Button<span class="tag">&lt;/button&gt;</span>
+						</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br>
+		<div class="container">
+			<div class="forms">
+				<div class="row">
+					<h1 class="heading" id="forms">Forms</h1>
+					<br>
+					<p>HTML forms are used if you want to collect some data from the visitors of your website. Data's collected will be send to the back-end for processing. <strong>easyCSS</strong> offers different type of forms to be use to collect data from users.</p>
+					<div class="example">
+						<h4>Input field with Input Button</h4><br>
+						<form>							
+							<input type="text" placeholder="Enter Email"><br>
+							<input type="password" placeholder="Enter Password"><br>
+							<input type="submit" class="primary-button" value="Submit Button">
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Input field with Input Button --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"text"</span> <span class="class">placeholder</span>=<span class="value">"Enter Email"</span>&gt;&lt;br&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"password"</span> <span class="class">placeholder</span>=<span class="value">"Enter Password"</span>&gt;&lt;br&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"submit"</span> <span class="class">class</span>=<span class="value">"primary-button"</span> <span class="class">value</span>=<span class="value">"Submit Button"</span>&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Dropdown List</h4><br>
+						<form>
+							<select required>		
+								<option value="" disabled selected>Select Size...</option>					
+								<option>Small</option>
+								<option>Medium</option>
+								<option>Large</option>
+							</select>	
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Dropdown List --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;select <span class="class">required</span>&gt;</span><br>			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option <span class="class">value</span>=<span class="value">""</span> <span class="class">disabled selected</span>&gt;</span>Select Size...<span class="tag">&lt;/option&gt;</span><br>	
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Small<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Medium<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Large<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;/select&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Select Option Multiple</h4><br>
+						<form>
+							<select multiple>
+								<option>Blue</option>
+								<option>Red</option>
+								<option>Green</option>
+								<option>Black</option>
+								<option>Yellow</option>
+							</select>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Select Option Multiple --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;select <span class="class">multiple</span>&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Blue<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Red<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Green<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Black<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;option&gt;</span>Yellow<span class="tag">&lt;/option&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;/select&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Checkbox</h4><br>
+						<form>
+								<input id="S" type="Checkbox"><label for="S">S</label>
+								<input id="M" type="Checkbox"><label for="M">M</label>
+								<input id="L" type="Checkbox"><label for="L">L</label>
+								<input id="XL" type="Checkbox"><label for="XL">XL</label>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Checkbox --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"S"</span> <span class="class">type</span>=<span class="value">"Checkbox"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"S"</span>&gt;</span>S<span class="tag">&lt;/label&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"M"</span> <span class="class">type</span>=<span class="value">"Checkbox"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"M"</span>&gt;</span>M<span class="tag">&lt;/label&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"L"</span> <span class="class">type</span>=<span class="value">"Checkbox"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"L"</span>&gt;</span>L<span class="tag">&lt;/label&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"XL"</span> <span class="class">type</span>=<span class="value">"Checkbox"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"XL"</span>&gt;</span>XL<span class="tag">&lt;/label&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Radio Buttons</h4><br>
+						<form>
+								<input id="female" type="radio" name="gender"><label for="female">Female</label>
+								<input id="male" type="radio" name="gender"><label for="male">Male</label>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Radio Buttons --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"female"</span> <span class="class">type</span>=<span class="value">"radio"</span> <span class="class">name</span>=<span class="value">"gender"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"female"</span>&gt;</span>Female<span class="tag">&lt;/label&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">id</span>=<span class="value">"male"</span> <span class="class">type</span>=<span class="value">"radio"</span> <span class="class">name</span>=<span class="value">"gender"</span>&gt;</span><span class="tag">&lt;label <span class="class">for</span>=<span class="value">"male"</span>&gt;</span>Male<span class="tag">&lt;/label&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Text Area</h4><br>
+						<form>
+							<textarea placeholder="Put your Message here"></textarea>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Text Area with 150px height --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;textarea <span class="class">placeholder</span>=<span class="value">"Put your Message here"</span>&gt;</span><br>
+								&nbsp;&nbsp;<span class="comment">&lt;!-- You can add your own text inside this &lt;textarea&gt; element --&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;/textarea&gt;</span><span class="comment"> </span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Required Inputs</h4><br>
+						<form>
+							<input type="email" placeholder="Requires an email" required>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Required Inputs --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"email"</span> <span class="class">placeholder</span>=<span class="value">"Requires an email"</span> <span class="class">required</span>&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Read-Only Inputs</h4><br>
+						<form>
+							<input type="text" value="Read-Only input here..." readonly>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Read-Only Inputs --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"text"</span> <span class="class">value</span>=<span class="value">"Read-Only input here..."</span> <span class="class">readonly</span>&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+						<br><br>
+						<h4>Disabled Inputs</h4><br>
+						<form>
+							<input type="text" placeholder="Disabled input here..." disabled>
+						</form>
+						<br>
+						<div class="code-example">							
+							<pre><code>
+								<span class="comment">&lt;!-- Disabled Inputs --&gt;</span><br>
+								<span class="tag">&lt;form&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;input <span class="class">type</span>=<span class="value">"text"</span> <span class="class">placeholder</span>=<span class="value">"Disabled input here..."</span> <span class="class">disabled</span>&gt;</span><br>
+								<span class="tag">&lt;/form&gt;</span><br>
+							</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<br><br><br><br><br>	
+		<div class="container">
+			<div class="blockquote">
+				<div class="row">
+					<h1 class="heading" id="blockquote">Blockquote</h1>
+					<br>
+					<p>The blockquote element is used quoted content used to represent information from other sources.</p>
+					<div class="example">
+						<blockquote>
+						  <p>easyCSS is the best CSS Framework!</p>
+						  <cite>John Ray Pantaleon</cite>
+						</blockquote>
+						<br>
+						<div class="code-example">
+							<pre><code>
+								<span class="comment">&lt;!-- Blockquote --&gt;</span><br>
+								<span class="tag">&lt;blockquote&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>easyCSS is the best CSS Framework!<span class="tag">&lt;/p&gt;</span><br>
+								&nbsp;&nbsp;<span class="tag">&lt;cite&gt;</span>John Ray Pantaleon<span class="tag">&lt;/cite&gt;</span><br>
+								<span class="tag">&lt;/blockquote&gt;</span>	
+							</code></pre>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>	
+		<br><br><br><br><br>
+		<hr>	
+		<div class="container">
+			<div class="footer">
+				<div class="row">
+					<span id="copyright">
+						&copy; 2017 easy CSS.<br>Designed by <a href="http://johnraypantaleon.com/"> John Ray Pantaleon</a>
+					</span>					
+				</div>
+			</div>
+		</div>	
+	</div>	
+</body>
+</html>

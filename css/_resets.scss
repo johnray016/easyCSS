@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+html,	
+body,
+ul,
+ol,
+dl,
+li,
+p,
+pre,
+code,
+.container,
+.row {
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: inline-block;
+	margin: 0;
+}
+html {
+	font-size: 100%;
+}
+p {
+	text-align: justify;
+}

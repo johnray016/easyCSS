@@ -1,0 +1,667 @@
+@import 'variables';
+@import 'resets';
+
+
+//-----------GENERAL CSS-----------//
+body {
+	color: $primaryColor;
+	font-family: $primaryFont;
+}
+.absolute {
+	position: absolute;
+	top: 4.1em;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+	z-index: -100;
+}
+.container {
+	width: 56.25em;
+	margin: 0 auto;
+}
+.row {
+	display: block;	
+}
+.clearfix {
+	clear: both;
+}
+hr {
+	border: 0.05em solid $secondaryColor;
+	margin: 0 0.625em;
+}
+.example {
+	border: 0.1em solid rgba(114, 115, 117, 0.6);
+	border-radius: 0.5em;
+	padding: 1.5em;
+	margin-top: 0.7em;
+}
+.code-example {
+	background-color: rgba(204, 204, 204, 0.5);
+	border: 0.1em solid #918f8f;
+	border-radius: 0.3125em;
+}
+.tag {
+	color: $tagColor;
+}
+.class {
+	color: $classColor;
+}
+.value {
+	color: $valueColor;
+}
+code {
+  background: $codeBackgroundColor;
+  font-size: 1em;
+  white-space: nowrap;
+  border-radius: 0.3125em;
+  padding: 0.1875em 0.3125em;
+  margin-right: 0.3125em;
+}
+pre {
+  background: $codeBackgroundColor;
+  padding: 0.625em;
+  border-radius: 0.3125em;
+}
+pre code {
+  border-radius: 0;
+  display: block;
+  white-space: normal;
+}
+.comment {
+	color: #75715e;
+}
+.heading {
+	text-align: center;
+	font-family: $secondaryFont;
+	color: $secondaryColor;
+	display: block;
+}
+.sub-heading {
+
+}
+a {
+	text-decoration: none;
+	color: $secondaryColor;
+}
+.introduction,
+.grid,
+.typography,
+.tables,
+.alerts,
+.buttons,
+.forms,
+.blockquote,
+.introduction,
+.footer {
+	margin-left: 1em;
+}
+//-----------NAVIGATION-----------//
+.navigation {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0.625em 0;
+}
+.col-30 {	
+	float: left;
+	img {
+		height: 3.125em;
+		padding: 0 0 0.625em 0.625em ;
+	}
+}
+.col-70 {
+	position: relative;
+	float: right;
+	li {
+		display: inline-block;
+		padding: 0.625em 0.625em 0 0.625em;
+		a {
+			text-decoration: none;	
+			color: $primaryColor;
+			font-family: $secondaryFont;
+		}
+		a:hover {
+			color: $secondaryColor;
+		}
+	}
+}
+#menu {	
+	display: inline-block;
+	list-style: none;
+}
+#sub-menu {
+	display: none;
+	position: absolute;			
+	margin-top: 0;
+	right: 0.5em;
+	top: 3.5em;
+	float: right!important;
+	background-color: #fff;
+	border: 0.0625em solid $primaryColor;
+	border-top: 0;
+	z-index: 1000;
+	li {
+		display: block;	
+		border-bottom: 0.0625em solid $primaryColor;
+		padding: 0;
+		&:hover {			
+			background-color: #efefef;
+		}
+	}
+	a {
+		color: $primaryColor;
+		text-decoration: none;
+		display: block;
+		padding: 0.625em 4.0625em;
+		&:hover {
+			color: $secondaryColor;
+		}
+	}	
+}
+
+//-----------JUMBOTRON-----------//
+.jumbotron {
+	z-index: -19;
+	height: 31.25em;
+	background-color: $jumbotronBGColor;
+	text-align: center;
+	img {
+		height: 12.5em;
+		margin-top: 5em;
+	}
+}
+#version {
+	font-style: italic;
+}
+.getStarted {
+	padding: 1em 2em;
+	border: 0;
+	border-radius: 0.3125em;
+	cursor: pointer;
+	color: white;
+	background-color: $secondaryColor;
+	margin-top: 0.625em;
+	font-weight: bold;
+	&:hover {
+		background-color: #00a1de;
+	}
+	a {
+		color: white;
+		font-family: 'Nova+Mono', sans-serif;
+	}
+}
+//-----TYPOGRAPHY-----//
+.heading-text {
+	font-size: 0.7em;
+}
+h6 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 1.125em;
+}
+h4 {
+	font-size: 1.375em;
+}
+h3 {
+	font-size: 1.75em;
+}
+h2 {
+	font-size: 2.25em;
+}
+h1 {
+	font-size: 3em;
+}
+//-----LIST-----//
+.col {
+	display: inline-block;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+}
+.col-list {	
+	@extend .col;
+	width: 33.333333%;	
+	ul, ol, dl {
+		display: inline-block;
+		padding-bottom: 1em;
+	}
+}
+//-----GRID SYSTEM-----//
+.col-50 {
+	@extend .col;
+	width: 50%;		
+}
+.col-33 {
+	@extend .col;
+	width: 33.333333%;		
+}
+.col-60 {
+	@extend .col;
+	width: 60%;
+}
+.col-40 {
+	@extend .col;
+	width: 40%;
+}
+.col-25 {
+	@extend .col;
+	width: 25%;
+}
+.column {
+	background-color: $codeBackgroundColor;
+	display: block;
+	margin: 0 0.5em 1em 0.5em;
+	border-radius: 0.25em;
+	padding: 0.7em 0;
+	font-weight: bold;
+}
+//-----TABLES-----//
+table {
+	width: 100%;
+	border-collapse: collapse;
+	caption {
+		font-size: 1.5em;
+		font-weight: bold;
+		padding-bottom: 1.25em;
+	}
+	tr {
+		text-align: left;
+		border-bottom: 0.1em solid $codeBackgroundColor;	
+	}
+	td, th {		
+		padding: 0.625em;
+	}
+}
+//-----ALERTS-----//
+.alert {
+	border-radius: 0.3125em;
+	border: 0.0625em;
+	border-style: solid;
+	padding: 0.625em;	
+}
+.alert-success {
+	@extend .alert;
+	background-color: $successAlertBGColor;
+	color: $successAlertFontColor;
+	border-color: $successAlertBorderColor;
+	span {
+		font-weight: bold;
+	}
+}
+.alert-error {
+	@extend .alert;
+	background-color: $errorAlertBGColor;
+	color: $errorAlertFontColor;
+	border-color: $errorAlertBorderColor;
+	span {
+		font-weight: bold;
+	}
+}
+.alert-warning {
+	@extend .alert;
+	background-color: $warningAlertBGColor;
+	color: $warningAlertFontColor;
+	border-color: $warningAlertBorderColor;
+	span {
+		font-weight: bold;
+	}
+}	
+.alert-notice {
+	@extend .alert;
+	background-color: $noticeAlertBGColor;
+	color: $noticeAlertFontColor;
+	border-color: $noticeAlertBorderColor;
+	span {
+		font-weight: bold;
+	}
+}
+//-----BUTTONS-----//
+.button {
+	padding: 0.7em 1em;
+	border: 0;
+	border-radius: 0.3125em;
+	cursor: pointer;
+	color: white;
+}
+.primary-button {
+	@extend .button;
+	background-color: $primaryButtonBGColor;
+	&:hover {
+	background-color: $primaryButtonHoverBGColor;
+	outline: none;
+	}
+}
+.secondary-button {
+	@extend .button;
+	background-color: $secondaryButtonBGColor;
+	&:hover {
+	background-color: $secondaryButtonHoverBGColor;
+	outline: none;
+	}
+}
+.success-button {
+	@extend .button;
+	background-color: $successButtonBGColor;
+	&:hover {
+	background-color: $successButtonHoverBGColor;
+	outline: none;
+	}
+}
+.warning-button {
+	@extend .button;
+	background-color: $warningButtonBGColor;
+	&:hover {
+	background-color: $warningButtonHoverBGColor;
+	outline: none;
+	}
+}
+.error-button {
+	@extend .button;
+	background-color: $errorButtonBGColor;
+	&:hover {
+	background-color: $errorButtonHoverBGColor;
+	outline: none;
+	}
+}
+.outlined-button {
+	padding: 0.7em 1em;
+	border: 0.12em solid grey;
+	color: grey;
+	border-radius: 0.3125em;
+	cursor: pointer;
+	background-color: transparent;
+}
+.outlined-primary-button {
+	@extend .outlined-button;
+	&:hover {
+	background-color: $primaryButtonBGColor;
+	color: white;
+	border-color: white;
+	outline: none;
+	}
+}
+.outlined-secondary-button {
+	@extend .outlined-button;
+	&:hover {
+	background-color: $secondaryButtonBGColor;
+	color: white;
+	border-color: white;
+	outline: none;
+	}
+}
+.outlined-success-button {
+	@extend .outlined-button;
+	&:hover {
+	background-color: $successButtonBGColor;
+	color: white;
+	border-color: white;
+	outline: none;
+	}
+}
+.outlined-warning-button {
+	@extend .outlined-button;
+	&:hover {
+	background-color: $warningButtonBGColor;
+	color: white;
+	border-color: white;
+	outline: none;
+	}
+}
+.outlined-error-button {
+	@extend .outlined-button;
+	&:hover {
+	background-color: $errorButtonBGColor;
+	color: white;
+	border-color: white;
+	outline: none;
+	}
+}
+.buttons a {
+	font-size: 0.8125em;
+	color: white;
+}
+.xs-button {
+	font-size: 0.8em;
+	line-height: 1.125em;
+	padding: 0.3125em;
+}
+.sm-button {
+	font-size: 1em;
+	line-height: 1.25em;
+	padding: 0.5em;
+}
+.md-button {
+	font-size: 1.2em;
+	line-height: 1.375em;
+	padding: 0.6875em;
+}
+.lg-button {
+	font-size: 1.4em;
+	line-height: 1.5em;
+	padding: 0.9375em;
+}
+
+//-----FORMS-----//
+input[type='text'],
+input[type='password'] {
+    border-radius: 0.3125em;
+    padding: 0.3125em;
+    border: 0.0625em solid grey;    
+	outline: none;
+	height: 2.1875em;
+	margin: 0.3125em;
+	&:focus {
+		border-color: $secondaryColor;
+	}
+}
+select[multiple] {
+    width: 10em;
+}
+input[type="checkbox"] + label {
+	font-weight: bold;
+}
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+input[type="radio"] + label { 
+	font-weight: bold; 
+}
+textarea {
+	 width: 100%;
+	 height: 9.375em;
+}
+input:required {
+    border-radius: 0.3125em;
+    padding: 0.3125em;
+    border: 0.0625em solid grey;    
+	outline: none;
+	height: 2.1875em;
+	&:focus {
+		border-color: red;
+	}
+}
+input:read-only {
+    background-color: $codeBackgroundColor;
+    color: grey;
+}
+input:disabled {
+    cursor:not-allowed;
+}
+//-----BLOCKQUOTE-----//
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 1.125em;
+    font-style: italic;
+    margin: 0.25em 0;
+    padding: 0.35em 3.75em;
+    line-height: 1.45em;
+    position: relative;
+    color: #383838;
+    background-color: #efefef;
+    border-left: 0.3125em solid $codeBackgroundColor;
+    &:before {
+	    display: block;
+	    padding-left: 0.625em;
+	    content: "\201C";
+	    font-size: 5em;
+	    position: absolute;
+	    left: -0.40em;
+	    top: 0.25em;
+	    color: #7a7a7a;
+	}
+	cite {
+		color: #999999;
+		font-size: 0.875em;
+		display: block;
+		margin-top: 0.3125em;
+		&:before {
+			content: "\2014 \2009";
+		}
+	} 
+}
+//-----COPYRIGHT-----//
+.footer {
+	margin: 2.5em 0;
+	text-align: center;
+	#copyright {
+	}
+}	
+
+
+//-----MEDIA QUERIES-----//
+@media only screen and (max-width: 768px) {
+    /* For ipad, tablets */
+
+    .container {
+		width: auto;
+		margin: 0 1.25em;
+	}	
+	.typography .col-33 {
+		float: left!important;
+		display: inline-block;
+		ul {
+			display: block;
+			list-style-position: inside;
+		}
+	}
+	.col-33 {
+		float: none;
+		width: 100%
+	}
+	.col-25 {
+		width: 50%;
+	}
+	.example {
+		padding: 0.7em;
+	}
+	.introduction,	
+	.grid,
+	.typography,
+	.tables,
+	.alerts,
+	.buttons,
+	.forms,
+	.blockquote,
+	.footer {
+		margin-left: 0;
+	}
+	.jumbotron {
+		img {
+			height: 9.375em;
+		}
+	}
+}
+@media only screen and (max-width: 495px) {
+	 /* For moblile phone, smartphones */
+	.col {
+		float: none;
+		display: block;		
+		width: 100%;
+	}		
+	.grid .column {
+		font-size: 0.9em;
+	}	
+	.button,
+	.outlined-button {
+		display: block;
+		margin: 0.3125em auto;
+	}
+	form {
+		text-align: center;
+		input, select, label {
+			margin: 0.3125em 0.2em;
+		}
+	}
+	.buttons, .forms {
+		h4, a {
+			text-align: center;
+			display: block;
+		}
+		a {
+			width: 50%;
+		}
+	}
+	.alert {
+		font-size: 0.7em;
+	}		
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		caption {
+			font-size: 1.1em;
+		}		
+		th, td {
+			font-size: 0.8em;
+		}
+	}		
+	form {
+		margin: 0.3125em auto;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	h1 {
+		font-size: 2.5em;
+	}
+	.absolute {
+	top: 6.1em;
+	}
+	.col-70 {
+		float: none;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	.col-30	 {
+		float: none;
+		text-align: center;
+	}
+	blockquote {
+	    font-size: 0.9em;
+	    &:before {
+		    font-size: 4em;
+		    left: -0.40em;
+		    top: 0.25em;
+		    color: #7a7a7a;
+		}
+		cite {
+			font-size: 0.8em;
+		}
+	}	
+	#sub-menu {
+	right: 0;
+	top: 2.125em;
+	width: 100%;
+		a {
+			display: block;
+			width: 100%;
+		}
+	}
+}
